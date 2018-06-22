@@ -1,9 +1,10 @@
 package com.codekili.androidadvancedbook.chapter_1
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.MotionEvent
+import android.view.View
 import com.codekili.androidadvancedbook.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -28,7 +29,21 @@ class Chapter1Activity : AppCompatActivity() {
             }
            super.onTouchEvent(event)
         }
+        MeasureSpec();
+    }
 
+    fun MeasureSpec() {
+        var MODE_SHIFT = 30;
+        var a0 = 0 shr MODE_SHIFT
+        var a1 = 0 shl MODE_SHIFT
+        var b0 = 1 shr MODE_SHIFT
+        var b1 = 1 shl MODE_SHIFT
+        var c0 = 2 shr MODE_SHIFT
+        var c1 = 2 shl 31
+        Log.e(" MeasureSpec ", " a0 = $a0 \n a1 = $a1 \n b0 = $b0 \n b1 = $b1  \n c0 = $c0 \n c1 = $c1 ")
+        Log.e(" MeasureSpec ", "MeasureSpec.UNSPECIFIED = ${View.MeasureSpec.UNSPECIFIED} \n" +
+                "MeasureSpec.EXACTLY = ${View.MeasureSpec.EXACTLY}  \n" +
+                "MeasureSpec.AT_MOST = ${View.MeasureSpec.AT_MOST} ")
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
