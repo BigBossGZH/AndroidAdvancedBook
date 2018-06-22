@@ -11,7 +11,7 @@ import android.widget.TextView
  */
 class MyTextView : TextView {
     companion object {
-        val TAG = "MyTextView"
+        private val TAG = "MyTextView"
     }
 
     constructor(context: Context) : super(context)

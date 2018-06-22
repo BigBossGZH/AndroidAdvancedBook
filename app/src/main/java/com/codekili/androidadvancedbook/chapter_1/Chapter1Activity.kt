@@ -14,17 +14,17 @@ class Chapter1Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mTextView.setOnClickListener {
-            Log.e(MyTextView.TAG, "MyTextView  OnClick")
+            Log.e(TAG, "MyTextView  OnClick")
         }
         myRelativeLy.setOnClickListener {
-            Log.e(MyTextView.TAG, "myRelativeLy  OnClick")
+            Log.e(TAG, "myRelativeLy  OnClick")
         }
         mTextView.setOnTouchListener { v, event ->
             when (event?.action) {
-                MotionEvent.ACTION_DOWN -> Log.e(MyTextView.TAG, "MyTextView onTouch ACTION_DOWN")
-                MotionEvent.ACTION_MOVE -> Log.e(MyTextView.TAG, "MyTextView onTouch ACTION_MOVE")
-                MotionEvent.ACTION_UP -> Log.e(MyTextView.TAG, "MyTextView onTouch ACTION_UP")
-                MotionEvent.ACTION_CANCEL -> Log.e(MyTextView.TAG, "MyTextView onTouch ACTION_CANCEL")
+                MotionEvent.ACTION_DOWN -> Log.e(TAG, "MyTextView onTouch ACTION_DOWN")
+                MotionEvent.ACTION_MOVE -> Log.e(TAG, "MyTextView onTouch ACTION_MOVE")
+                MotionEvent.ACTION_UP -> Log.e(TAG, "MyTextView onTouch ACTION_UP")
+                MotionEvent.ACTION_CANCEL -> Log.e(TAG, "MyTextView onTouch ACTION_CANCEL")
             }
            super.onTouchEvent(event)
         }
@@ -33,10 +33,10 @@ class Chapter1Activity : AppCompatActivity() {
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         when (event?.action) {
-            MotionEvent.ACTION_DOWN -> Log.e(MyTextView.TAG, "onTouchEvent ACTION_DOWN")
-            MotionEvent.ACTION_MOVE -> Log.e(MyTextView.TAG, "onTouchEvent ACTION_MOVE")
-            MotionEvent.ACTION_UP -> Log.e(MyTextView.TAG, "onTouchEvent ACTION_UP")
-            MotionEvent.ACTION_CANCEL -> Log.e(MyTextView.TAG, "onTouchEvent ACTION_CANCEL")
+            MotionEvent.ACTION_DOWN -> Log.e(TAG, "onTouchEvent ACTION_DOWN")
+            MotionEvent.ACTION_MOVE -> Log.e(TAG, "onTouchEvent ACTION_MOVE")
+            MotionEvent.ACTION_UP -> Log.e(TAG, "onTouchEvent ACTION_UP")
+            MotionEvent.ACTION_CANCEL -> Log.e(TAG, "onTouchEvent ACTION_CANCEL")
         }
         return super.onTouchEvent(event)
     }

@@ -11,7 +11,7 @@ import android.widget.RelativeLayout
  */
 class MyRelativeLayout : RelativeLayout {
     companion object {
-        val TAG = "MyRelativeLayout"
+       private val TAG = "MyRelativeLayout"
     }
 
     constructor(context: Context) : super(context)
@@ -22,19 +22,20 @@ class MyRelativeLayout : RelativeLayout {
         when (ev?.action) {
             MotionEvent.ACTION_DOWN -> {
                 Log.e(TAG, "dispatchTouchEvent ACTION_DOWN")
+                return false;
             }
             MotionEvent.ACTION_MOVE -> Log.e(TAG, "dispatchTouchEvent ACTION_MOVE")
             MotionEvent.ACTION_UP -> Log.e(TAG, "dispatchTouchEvent ACTION_UP")
             MotionEvent.ACTION_CANCEL -> Log.e(TAG, "dispatchTouchEvent ACTION_CANCEL")
         }
-        return super.dispatchTouchEvent(ev)
+        return false
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
         when (ev?.action) {
             MotionEvent.ACTION_DOWN -> {
                 Log.e(TAG, "onInterceptTouchEvent ACTION_DOWN")
-                return true
+//                return true
             }
             MotionEvent.ACTION_MOVE -> Log.e(TAG, "onInterceptTouchEvent ACTION_MOVE")
             MotionEvent.ACTION_UP -> {
