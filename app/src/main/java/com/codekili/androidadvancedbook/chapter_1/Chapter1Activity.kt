@@ -1,21 +1,23 @@
-package com.codekili.androidadvancedbook
+package com.codekili.androidadvancedbook.chapter_1
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
-import android.widget.TextView
-import com.codekili.androidadvancedbook.chapter_1.MyTextView
+import com.codekili.androidadvancedbook.R
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
-    val TAG="MainActivity"
+class Chapter1Activity : AppCompatActivity() {
+    val TAG="Chapter1Activity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mTextView.setOnClickListener {
             Log.e(MyTextView.TAG, "MyTextView  OnClick")
+        }
+        myRelativeLy.setOnClickListener {
+            Log.e(MyTextView.TAG, "myRelativeLy  OnClick")
         }
         mTextView.setOnTouchListener { v, event ->
             when (event?.action) {
@@ -26,6 +28,7 @@ class MainActivity : AppCompatActivity() {
             }
            super.onTouchEvent(event)
         }
+
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
