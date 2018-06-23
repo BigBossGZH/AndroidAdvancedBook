@@ -40,10 +40,15 @@ class Chapter1Activity : AppCompatActivity() {
         var b1 = 1 shl MODE_SHIFT
         var c0 = 2 shr MODE_SHIFT
         var c1 = 2 shl 31
+        val MODE_MASK = 0x3 shl MODE_SHIFT
+
         Log.e(" MeasureSpec ", " a0 = $a0 \n a1 = $a1 \n b0 = $b0 \n b1 = $b1  \n c0 = $c0 \n c1 = $c1 ")
         Log.e(" MeasureSpec ", "MeasureSpec.UNSPECIFIED = ${View.MeasureSpec.UNSPECIFIED} \n" +
                 "MeasureSpec.EXACTLY = ${View.MeasureSpec.EXACTLY}  \n" +
                 "MeasureSpec.AT_MOST = ${View.MeasureSpec.AT_MOST} ")
+        Log.e(" MeasureSpec ", "0x3 = ${0x3} \n" +
+                "MeasureSpec.EXACTLY = $MODE_MASK  \n"
+               )
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {

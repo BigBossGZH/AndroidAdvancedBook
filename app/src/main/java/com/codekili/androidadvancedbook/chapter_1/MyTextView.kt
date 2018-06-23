@@ -29,6 +29,9 @@ class MyTextView : TextView {
         return super.dispatchTouchEvent(event)
     }
 
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+    }
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         when (event?.action) {
             MotionEvent.ACTION_DOWN -> Log.e(TAG, "onTouchEvent ACTION_DOWN")

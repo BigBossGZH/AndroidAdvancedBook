@@ -31,6 +31,9 @@ class MyRelativeLayout : RelativeLayout {
         return false
     }
 
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+    }
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
         when (ev?.action) {
             MotionEvent.ACTION_DOWN -> {
