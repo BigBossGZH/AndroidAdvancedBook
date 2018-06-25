@@ -22,7 +22,6 @@ class MyRelativeLayout : RelativeLayout {
         when (ev?.action) {
             MotionEvent.ACTION_DOWN -> {
                 Log.e(TAG, "dispatchTouchEvent ACTION_DOWN")
-                return false;
             }
             MotionEvent.ACTION_MOVE -> Log.e(TAG, "dispatchTouchEvent ACTION_MOVE")
             MotionEvent.ACTION_UP -> Log.e(TAG, "dispatchTouchEvent ACTION_UP")
