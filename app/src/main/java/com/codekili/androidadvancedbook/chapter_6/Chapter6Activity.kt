@@ -16,7 +16,7 @@ class Chapter6Activity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chapter6_main)
         linearlayout.setOnClickListener {
-            SnackbarUtil.show(it,"2018年7月11日14:40:41",Snackbar.LENGTH_INDEFINITE)
+            SnackbarUtil.show(it,"2018年7月11日14:40:41",Snackbar.LENGTH_SHORT)
         }
     }
 
